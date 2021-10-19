@@ -128,9 +128,9 @@ Outra diferença importante neste projeto em relação aos anteriores é que voc
 
   - Projeto individual.
 
-  - Serão `2` dias de projeto.
+  - Serão `3` dias de projeto.
   
-  - Data de entrega para avaliação final do projeto: `27/10/2021 - 14:00h`.
+  - Data de entrega para avaliação final do projeto: `28/10/2021 - 14:00h`.
 
 ---
 
@@ -139,9 +139,9 @@ Outra diferença importante neste projeto em relação aos anteriores é que voc
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-015-a-project-trybetunes-staging-test.git`.
+  * `git clone git@github.com:tryber/sd-015-a-project-trybetunes.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-015-a-project-trybetunes-staging-test`
+    * `cd sd-015-a-project-trybetunes`
 
 2. Instale as dependências e inicialize o projeto
   * Instale as dependências:
@@ -365,7 +365,7 @@ Dentro do componente `Login`, que é renderizado na rota `/`, crie um formulári
 
   * Crie um botão com o texto `Entrar`. Este botão deverá ter o atributo `data-testid="login-submit-button"`.
 
-  * O botão para entrar só deve ser habilitado caso o nome digitado tenha mais de 3 caracteres.
+  * O botão para entrar só deve ser habilitado caso o nome digitado tenha 3 ou mais caracteres.
 
   * Ao clicar no botão `Entrar`, utilize a função `createUser` da `userAPI` para salvar o nome digitado. A função `createUser` espera receber como argumento um objeto com as informações da pessoa: 
   ```
