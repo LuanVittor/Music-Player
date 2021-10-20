@@ -17,7 +17,7 @@ class Album extends React.Component {
         collectionName: '',
       },
       track: [],
-      saved: [],
+      favorites: [],
     };
   }
 
@@ -36,12 +36,12 @@ class Album extends React.Component {
       loading: false,
       result: collection,
       track: results.slice(1),
-      saved,
+      favorites: saved,
     });
   }
 
   render() {
-    const { loading, result, track, saved } = this.state;
+    const { loading, result, track, favorites } = this.state;
     return (
       <div data-testid="page-album">
         <Header />
@@ -53,7 +53,7 @@ class Album extends React.Component {
             <h4 data-testid="artist-name">{ result.artistName }</h4>
             {track.map(({ trackName, previewUrl, trackId }) => (
               <MusicCard
-                favorites={ saved }
+                favorites={ favorites }
                 trackName={ trackName }
                 previewUrl={ previewUrl }
                 key={ trackName }
