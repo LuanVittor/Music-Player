@@ -41,12 +41,14 @@ class Album extends React.Component {
         {(loading) ? <Loading /> : (
           <div>
             <h2 data-testid="album-name">{ result.collectionName }</h2>
+            <img src={ result.artworkUrl100 } alt="ImageAlbum" />
             <h4 data-testid="artist-name">{ result.artistName }</h4>
-            {track.map(({ trackName, previewUrl }) => (
+            {track.map(({ trackName, previewUrl, trackId }) => (
               <MusicCard
                 trackName={ trackName }
                 previewUrl={ previewUrl }
                 key={ trackName }
+                trackId={ trackId }
               />
             ))}
           </div>
