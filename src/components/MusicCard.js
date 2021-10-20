@@ -11,7 +11,7 @@ class MusicCard extends React.Component {
     this.getFavorites = this.getFavorites.bind(this);
     this.state = {
       loading: false,
-      // checked: false,
+      checked: false,
     };
   }
 
@@ -29,8 +29,7 @@ class MusicCard extends React.Component {
   async favoritar({ target: { name } }) {
     const { checked } = this.state;
     if (checked) {
-      this.setState({ checked: false });
-      this.setState({ loading: true, checked: false });
+      this.setState({ checked: false, loading: true });
       const result = await getMusics(name);
       await removeSong(result[0]);
       this.setState({ loading: false });
