@@ -35,6 +35,7 @@ class Profile extends React.Component {
         {(loading) ? <Loading /> : (
           <div>
             <h2>{ name }</h2>
+            <h2>{ name }</h2>
             <img data-testid="profile-image" src={ image } alt={ name } />
             <h3>{ email }</h3>
             <h3>{ description }</h3>
