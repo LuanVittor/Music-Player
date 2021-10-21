@@ -45,7 +45,4 @@ class Profile extends React.Component {
     );
   }
 }
-
-// https://images.vexels.com/media/users/3/140753/isolated/lists/07326bd6157c14c5f8316e52b6c9dae4-avatar-de-perfil-masculino-7.png
-
 export default Profile;
