@@ -22,6 +22,7 @@ class Favorites extends React.Component {
   }
 
   render() {
+    this.getFavorite();
     const { favorites } = this.state;
     return (
       <div data-testid="page-favorites">
