@@ -19,7 +19,7 @@ class MusicCard extends React.Component {
     this.getFavorites();
   }
 
-  async getFavorites() {
+  getFavorites() {
     const { trackName, favorites } = this.props;
     if (favorites.some((element) => element.trackName === trackName)) {
       this.setState({ checked: true });
