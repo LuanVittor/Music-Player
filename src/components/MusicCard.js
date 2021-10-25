@@ -28,11 +28,13 @@ class MusicCard extends React.Component {
 
   async favoritar({ target: { name } }) {
     const { checked } = this.state;
+    const { getFavorite } = this.props;
     if (checked) {
       this.setState({ checked: false, loading: true });
       const result = await getMusics(name);
       await removeSong(result[0]);
       this.setState({ loading: false });
+      getFavorite();
     } else {
       this.setState({ loading: true, checked: true });
       const result = await getMusics(name);
@@ -55,6 +57,7 @@ class MusicCard extends React.Component {
         <label htmlFor={ trackId }>
           Favorita
           <input
+            name={ trackId }
             id={ trackId }
             type="checkbox"
             data-testid={ `checkbox-music-${trackId}` }
@@ -73,6 +76,11 @@ MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
   trackId: PropTypes.number.isRequired,
   favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getFavorite: PropTypes.func,
+};
+
+MusicCard.defaultProps = {
+  getFavorite: () => null,
 };
 
 export default MusicCard;
